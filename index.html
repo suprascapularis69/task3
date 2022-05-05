@@ -31,48 +31,128 @@
                     <span class="first-screen__text_description">Buying a home is a life-changing experience, so shouldn’t your real estate agent be a life changer.</span>
                 </div>
                 <div class="first-screen__tabs">
-                    <div class="first-screen__tabs_labels">
-                        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
-                        <label for="tab-btn-1">Buy</label>
-                        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
-                        <label for="tab-btn-2">Rent</label>
-                        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
-                        <label for="tab-btn-3">Sell</label>
-                    </div>
-                    <div class="first-screen__tabs_content">
+                    <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                    <label for="tab-btn-1">Buy</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                    <label for="tab-btn-2">Rent</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                    <label for="tab-btn-3">Sell</label>
+                    <div class="first-screen__tabs_content" id="content-1">
                         <div class="selectLocation">
-                            <span class="selectLabelLocation">Location</span>
                             <div class="selectWrapper">
-                                <div class="selectCustom js-selectLocation" aria-hidden="true">
-                                    <div class="selectCustom-trigger">Dhaka</div>
+                                <div class="selectCustom js-selectLocationBuy" aria-hidden="true">
+                                    <span class="selectLabelLocation">Location</span>
                                     <div class="selectCustom-options">
                                         <div class="selectCustom-option" data-value="DH">Dhaka</div>
                                         <div class="selectCustom-option" data-value="EL">East London</div>
                                     </div>
+                                    <div class="selectCustom-trigger">Dhaka</div>
                                 </div>
                             </div>
                         </div>
                         <div class="selectProperty">
-                            <span class="selectLabelProperty">Property type</span>
                             <div class="selectWrapper">
-                                <div class="selectCustom js-selectProperty" aria-hidden="true">
-                                    <div class="selectCustom-trigger">Duplex</div>
+                                <div class="selectCustom js-selectPropertyBuy" aria-hidden="true">
+                                    <span class="selectLabelProperty">Property type</span>
                                     <div class="selectCustom-options">
                                         <div class="selectCustom-option" data-value="DU">Duplex</div>
                                         <div class="selectCustom-option" data-value="TH">Townhouse</div>
                                     </div>
+                                    <div class="selectCustom-trigger">Duplex</div>
                                 </div>
                             </div>
                         </div>
                         <div class="selectPrice">
-                            <span class="selectLabelPrice">Price</span>
                             <div class="selectWrapper">
-                                <div class="selectCustom js-selectPrice" aria-hidden="true">
-                                    <div class="selectCustom-trigger">$4000-$8000</div>
+                                <div class="selectCustom js-selectPriceBuy" aria-hidden="true">
+                                    <span class="selectLabelPrice">Price</span>
                                     <div class="selectCustom-options">
                                         <div class="selectCustom-option" data-value="48">$4000-$8000</div>
                                         <div class="selectCustom-option" data-value="23">$2000-$3000</div>
                                     </div>
+                                    <div class="selectCustom-trigger">$4000-$8000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#properties">
+                            <button type="submit" class="tabs-button">Search</button>
+                        </a>
+                    </div>
+                    <div class="first-screen__tabs_content" id="content-2">
+                        <div class="selectLocation">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectLocationRent" aria-hidden="true">
+                                    <span class="selectLabelLocation">Location</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DH">Dhaka</div>
+                                        <div class="selectCustom-option" data-value="EL">East London</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Dhaka</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectProperty">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPropertyRent" aria-hidden="true">
+                                    <span class="selectLabelProperty">Property type</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DU">Duplex</div>
+                                        <div class="selectCustom-option" data-value="TH">Townhouse</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Duplex</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectPrice">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPriceRent" aria-hidden="true">
+                                    <span class="selectLabelPrice">Price</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="48">$4000-$8000</div>
+                                        <div class="selectCustom-option" data-value="23">$2000-$3000</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">$4000-$8000</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#properties">
+                            <button type="submit" class="tabs-button">Search</button>
+                        </a>
+                    </div>
+                    <div class="first-screen__tabs_content" id="content-3">
+                        <div class="selectLocation">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectLocationSell" aria-hidden="true">
+                                    <span class="selectLabelLocation">Location</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DH">Dhaka</div>
+                                        <div class="selectCustom-option" data-value="EL">East London</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Dhaka</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectProperty">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPropertySell" aria-hidden="true">
+                                    <span class="selectLabelProperty">Property type</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="DU">Duplex</div>
+                                        <div class="selectCustom-option" data-value="TH">Townhouse</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">Duplex</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selectPrice">
+                            <div class="selectWrapper">
+                                <div class="selectCustom js-selectPriceSell" aria-hidden="true">
+                                    <span class="selectLabelPrice">Price</span>
+                                    <div class="selectCustom-options">
+                                        <div class="selectCustom-option" data-value="48">$4000-$8000</div>
+                                        <div class="selectCustom-option" data-value="23">$2000-$3000</div>
+                                    </div>
+                                    <div class="selectCustom-trigger">$4000-$8000</div>
                                 </div>
                             </div>
                         </div>

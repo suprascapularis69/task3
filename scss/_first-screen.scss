@@ -58,51 +58,57 @@
     }
     &__tabs {
         font-size: 0;
+        display: table;
         max-width: 842px;
         min-height: 181px;
-        @media (max-width: 884px) {
-            padding: 40px;
-            background-image: url("../images/e26760dbdab3d2ec654cf8368898f386.jpg");
-            background-size: cover;
-        }
-        @media (max-width: 452px) {
-            padding: 10px;
-        }
-        &_labels {
-            max-width: 258px;
-            padding-right: 9px;
-            padding-left: 9px;
-            display: inline-block;
-            box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.1);
-            @media (max-width: 884px) {
-                background: #FFFFFF;
-            }
-            @media (max-width: 452px) {
-                min-width: 200px;
-            }
-        }
-        &_labels>input[type="radio"] {
+        >input[type="radio"] {
             display: none;
         }
-        &_labels>label {
+        >label {
             display: inline-block;
             text-align: center;
             vertical-align: middle;
             user-select: none;
             min-width: 78px;
             padding: 15px 22px;
+            box-shadow: 0px 10px 75px rgb(0 0 0 / 10%);
             @include font-style(18px, 500, 27px, $font-color);
             cursor: pointer;
+            @media (max-width: 884px) {
+                background: #FFFFFF;
+            }
         }
-        &_labels>input[type="radio"]:checked+label {
+        >input[type="radio"]:checked+label {
             color: $hover-color;
             font-weight: 600;
         }
+        #tab-btn-1:checked~#content-1,
+        #tab-btn-2:checked~#content-2,
+        #tab-btn-3:checked~#content-3 {
+            display: block;
+            @media (max-width: 884px) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        @media (max-width: 884px) {
+            padding: 40px;
+            margin: 0 auto;
+            background-image: url("../images/e26760dbdab3d2ec654cf8368898f386.jpg");
+            background-size: cover;
+        }
+        @media (max-width: 452px) {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
         &_content {
+            display: none;
             background: #FFFFFF;
             border-radius: 0 5px 5px 5px;
             position: relative;
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.06);
+            }
             .tabs-button {
                 position: absolute;
                 top: calc(50% - 27px);
@@ -110,7 +116,7 @@
                 @include buttons(120px, 54px, $btn-big-br);
                 @include font-style(16px, 500, 24px, #FFFFFF);
                 @media (max-width: 884px) {
-                    top: 270px;
+                    top: 290px;
                 }
                 &::before {
                     position: absolute;
@@ -124,7 +130,6 @@
                 }
             }
         }
-    }
     &__photo {
         position: absolute;
         top: 0;
@@ -133,8 +138,6 @@
         max-width: 484px;
         min-height: 615px;
         @media (max-width: 884px) {
-            /*top: 40px;
-            right: 80px;*/
             display: none;
         }
     }
