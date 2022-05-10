@@ -31,6 +31,14 @@
     }
     &__logos {
         @include flex;
+        a {
+            border: 1px solid transparent;
+            border-radius: 10px;
+            padding: 10px;
+            &:hover {
+                border-color: $hover-color;
+            }
+        }
         @media (max-width: 884px) {
             flex-wrap: wrap;
             justify-content: space-around;

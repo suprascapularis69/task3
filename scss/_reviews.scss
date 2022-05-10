@@ -43,10 +43,10 @@
             }
         }
     }
-    .swiper {
+    &__swiper {
         width: 100%;
         min-height: 312px;
-        .swiper-slide {
+        &_slide {
             text-align: center;
             background: #fff;
             display: -webkit-box;
@@ -64,7 +64,7 @@
             @media (max-width: 672px) {
                 flex-direction: column;
             }
-            &__wrapper {
+            &_item {
                 max-width: 558px;
                 min-height: 260px;
                 padding: 30px;
@@ -76,8 +76,18 @@
                         margin-right: 0;
                     }
                 }
+                &:last-child {
+                    @media (max-width: 452px) {
+                        display: none;
+                    }
+                }
                 &:hover {
                     border-color: $hover-color;
+                }
+                >div {
+                    @media (max-width: 452px) {
+                        justify-content: center !important;
+                    }
                 }
                 @media (max-width: 1056px) {
                     max-width: 390px;
@@ -87,45 +97,55 @@
                     display: flex;
                     flex-direction: column;
                 }
-                @media (max-width: 452px) {
-                    max-width: 260px;
-                    margin-bottom: 50px;
-                }
-            }
-            &__head {
+            &_people {
                 @include flex;
-                &_people {
-                    @include flex;
-                    max-width: 296px;
-                    margin-bottom: 30px;
-                    &_photo {
-                        max-width: 74px;
-                        min-height: 74px;
-                        border-radius: 50%;
-                        object-fit: cover;
-                        margin-right: 31px;
-                    }
-                    &_name {
-                        @include font-style(22px, 600, 33px, $font-color);
-                        text-align: left;
-                        margin-bottom: 5px;
-                    }
-                    &_position {
-                        @include font-style(16px, 400, 24px, $font-color);
-                        opacity: 0.7;
-                        text-align: left;
+                max-width: 296px;
+                margin-bottom: 30px;
+                @media (max-width: 452px) {
+                    flex-direction: column;
+                }
+                &_photo {
+                    max-width: 74px;
+                    min-height: 74px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-right: 31px;
+                    @media (max-width: 452px) {
+                        margin-right: 0;
+                        margin-bottom: 10px;
                     }
                 }
-                &_quote {
-                    @media (max-width: 1056px) {
-                        display: none; 
+                &_name {
+                    @include font-style(22px, 600, 33px, $font-color);
+                    text-align: left;
+                    margin-bottom: 5px;
+                    @media (max-width: 452px) {
+                        text-align: center;
+                    }
+                }
+                &_position {
+                    @include font-style(16px, 400, 24px, $font-color);
+                    opacity: 0.7;
+                    text-align: left;
+                    @media (max-width: 452px) {
+                        text-align: center;
                     }
                 }
             }
-            &__description {
+            &_quote {
+                margin-bottom: 30px;
+                @media (max-width: 1056px) {
+                    display: none; 
+                }
+            }
+            &_description {
                 @include font-style(16px, 400, 24px, $font-color);
                 opacity: 0.7;
                 text-align: left;
+            } 
+            >div {
+                @include flex;       
+            }     
             }   
         }
     }

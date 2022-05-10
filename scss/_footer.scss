@@ -75,8 +75,9 @@
             min-width: 400px;
         }
         @media (max-width: 452px) {
-            flex-direction: column;
             min-width: 250px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }
