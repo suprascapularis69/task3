@@ -6,46 +6,48 @@
     @media (max-width: 672px) {
         margin-bottom: 70px;
     }
-    &__heading {
-        position: relative;
-        max-width: 282px;
-        @include font-style(44px, 600, 66px, $font-color);
-        text-align: center;
-        margin: 0 auto 66px auto;
+}
+
+.partners-heading {
+    position: relative;
+    max-width: 282px;
+    @include font-style(44px, 600, 66px, $font-color);
+    text-align: center;
+    margin: 0 auto 66px auto;
+    @media (max-width: 672px) {
+        @include font-style(30px, 600, 36px, $font-color);
+        margin-bottom: 33px;
+    }
+    @media (max-width: 452px) {
+        @include font-style(21px, 600, 26px, $font-color);
+    }
+    &::before {
+        content: url("../images/Grou.svg");
+        position: absolute;
+        top: -3px;
+        left: -6px;
         @media (max-width: 672px) {
-            @include font-style(30px, 600, 36px, $font-color);
-            margin-bottom: 33px;
-        }
-        @media (max-width: 452px) {
-            @include font-style(21px, 600, 26px, $font-color);
-        }
-        &::before {
-            content: url("../images/Grou.svg");
-            position: absolute;
-            top: -3px;
-            left: -6px;
-            @media (max-width: 672px) {
-                display: none;
-            }
+            display: none;
         }
     }
-    &__logos {
-        @include flex;
-        a {
-            border: 1px solid transparent;
-            border-radius: 10px;
-            padding: 10px;
-            &:hover {
-                border-color: $hover-color;
-            }
+}
+
+.partners-logos {
+    @include flex;
+    &__item {
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 10px;
+        &:hover {
+            border-color: $hover-color;
         }
-        @media (max-width: 884px) {
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        @media (max-width: 672px) {
-            flex-direction: column;
-            align-items: center;
-        }
+    }
+    @media (max-width: 884px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media (max-width: 672px) {
+        flex-direction: column;
+        align-items: center;
     }
 }
